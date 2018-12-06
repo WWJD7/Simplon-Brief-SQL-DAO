@@ -1,6 +1,4 @@
-<<<<<<< Upstream, based on origin/master
 # Simplon-Brief-SQL-DAO
-=======
 
 ## Compétences visées
 
@@ -86,4 +84,3 @@ Pour les apprenants avec des lacunes sur les bases, réduire le modèle de SHOP a 
 
 ## Méthode, outil(s) de suivi individuel à mettre en place
 
->>>>>>> 0421614 Blah
