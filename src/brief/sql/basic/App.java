@@ -36,10 +36,10 @@ public class App {
 		List<Pays> pays = new ArrayList<>();
         
 		while (resultSet.next()) {
-			Pays produit = new Pays();
-		    produit.setId(resultSet.getInt("id"));
-		    produit.setNom(resultSet.getString("nom"));		  
-		    pays.add(produit);
+			Pays unPays = new Pays();
+			unPays.setId(resultSet.getInt("id"));
+			unPays.setNom(resultSet.getString("nom"));		  
+		    pays.add(unPays);
 		}
 		
 		for(Pays p : pays)
@@ -47,8 +47,9 @@ public class App {
 			System.out.println(p);
 		}
 		
+		//Essayez avec d autres tables
 		
-		///Maintenant il faut découpler ce spaghetti avoir avoir Model et repository à leur place :)
+		///Plus tard il faut découpler ce spaghetti avoir  Model et repository à leur place :)
 		
 
 	}
