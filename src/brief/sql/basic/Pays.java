@@ -1,6 +1,6 @@
 package brief.sql.basic;
 
-public class Produit {
+public class Pays {
 
 	private int id;
 	private String nom;

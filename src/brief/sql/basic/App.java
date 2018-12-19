@@ -11,44 +11,38 @@ import java.util.List;
 public class App {
 
 	public static void main(String[] args) throws SQLException {
-		/*
-		 * CREATE TABLE simplon.produits ( id INT NOT NULL AUTO_INCREMENT, nom
-		 * varchar(100) NOT NULL, CONSTRAINT produits_PK PRIMARY KEY (id) )
-		 */
-
-		// remplacer avec vos paramètres
-		// Connection con =
-		// DriverManager.getConnection("jdbc:mysql://localhost:3306/simplon",
-		// "sarcelles", "sarcelles");
-
-		
+			
 		//Requetes d'insertion (executeUpdate)
-		Connection cnx = DriverManager.getConnection("jdbc:mysql://192.168.2.107:3306/simplon", "root", "root");
+		//si pbm avec le format horaire genre The server time zone value 'Paris, Madrid' is unrecognized
+		//ajouter cela juste apres le nom de la bases de données dans l'url jdbc
+		//?zeroDateTimeBehavior=CONVERT_TO_NULL&serverTimezone=UTC
+		
+		Connection cnx = DriverManager.getConnection("jdbc:mysql://localhost:3306/simplon", "sarcelles", "sarcelles");
 
 		Statement stmt = cnx.createStatement();
 
-		String insertSql = "INSERT INTO produits(nom) VALUES('vélo'),('Skateboard'),('Trotinette')";
+		String insertSql = "INSERT INTO pays(nom) VALUES('Roumanie'),('Algérie'),('Turquie')";
 
 		stmt.executeUpdate(insertSql);
 		
 		
 		//requete e select
-		String selectSql = "SELECT * FROM simplon.produits";
+		String selectSql = "SELECT * FROM simplon.pays";
 		ResultSet resultSet = stmt.executeQuery(selectSql);
 		
 		
-		//On cree une classe de Model, Produit, pour stocker les Produit dans un tableau de peoduit
+		//On cree une classe de Model, Pays, pour stocker les pays dans un tableau de pays
 		//On se retrouve ensuite dans un etat classique d'objet et de tableau d'objet, on oublie SQL !!
-		List<Produit> produits = new ArrayList<>();
+		List<Pays> pays = new ArrayList<>();
         
 		while (resultSet.next()) {
-		    Produit produit = new Produit();
+			Pays produit = new Pays();
 		    produit.setId(resultSet.getInt("id"));
 		    produit.setNom(resultSet.getString("nom"));		  
-		    produits.add(produit);
+		    pays.add(produit);
 		}
 		
-		for(Produit p : produits)
+		for(Pays p : pays)
 		{
 			System.out.println(p);
 		}
