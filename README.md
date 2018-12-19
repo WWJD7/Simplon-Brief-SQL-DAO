@@ -24,15 +24,16 @@
 
 # Dispositifs d’animation
 ## Ateliers Phase 1
-- Learning by teachning en groupe sur les aspects principaux du SQL
+- Learning by teachning en groupe sur les aspects principaux du SQL : Relations, Commandes (DDL, DML, DCL, TCL), les contraintes, Merise
 -  Analyse et appropriation dans le contexte des exemples de W3 Schools sur SQL
-- Création de tutoriels vidéios sur la sauvegarde et la restauration d'une base MySQL
+- Création de tutoriels vidéos sur la sauvegarde et la restauration d'une base MySQL
 - Kahoot sur les bases de SQL avec acronymes et exemples de résultats de requêtes
 -  Veille sur JDBC et les standard SQL ANSI 92
 
 ## Théorie Phase 1 (2 heures)
 - introduction sur le SQL
 - Les principes avancées SQL : types de données, index, contraintes et jointures
+_ Le Modele Conceptuel de Données (MCD) : regarder vidéo proposée @home
  
 ## Projet Phase 1 (1 semaine)
 - Passage du modèle de SHOP en SQL
@@ -58,7 +59,8 @@
 - https://dev.mysql.com/doc/
 -  https://www.w3schools.com/sql/default.asp
 -  https://kahoot.it/
-- Le code JAVA du model de SHOP et son shéma UML (dans ce repository)
+- https://www.youtube.com/watch?v=obfNA-838YY
+- Le code JAVA du model de SHOP et son shéma UML (dans le repository Shop)
 - https://www.oracle.com/technetwork/java/overview-141217.html
 
 
